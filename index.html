@@ -1,10 +1,43 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <title></title>
-</head>
-<body>
- <p>Васина Вероника</p>
-</body>
-</html>
+<section>
+  <header>
+    header: sized to content
+    <br>(but is it really?)
+  </header>
+  <body>
+    <style>
+      section {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  height: 300px;
+}
+header {
+  flex: 0 1 auto;
+  background: tomato;
+}
+div {
+  flex: 1 1 auto;
+  background: gold;
+  overflow: auto;
+}
+footer {
+  flex: 0 1 60px;
+  background: lightgreen;
+  /* fixes the footer: min-height: 60px; */
+}
+    </style>
+    <div>
+    main content: Васина Вероника<br>
+    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
+    <!-- uncomment to see it break - ->
+    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
+    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
+    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
+    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
+    <!-- -->
+  </div>
+  </body>  
+  <footer>
+    footer: fixed height in px
+  </footer>
+</section>

@@ -1,43 +1,27 @@
-<section>
-  <header>
-    header: sized to content
-    <br>(but is it really?)
-  </header>
-  <body>
-    <style>
-      section {
-  display: flex;
-  flex-flow: column;
-  align-items: stretch;
-  height: 300px;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
-header {
-  flex: 0 1 auto;
-  background: tomato;
+
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
 }
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* full-sized  container that fills up the page */
 div {
-  flex: 1 1 auto;
-  background: gold;
-  overflow: auto;
+  height: 100%;
+  width: 100%;
+
+  /* example padding, font-size, background, etc */
+  padding: 10px;
+  font-size: 20px;
+  background-color: lightskyblue;
 }
-footer {
-  flex: 0 1 60px;
-  background: lightgreen;
-  /* fixes the footer: min-height: 60px; */
-}
-    </style>
-    <div>
-    main content: Васина Вероника<br>
-    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
-    <!-- uncomment to see it break - ->
-    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
-    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
-    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
-    x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>x<br>
-    <!-- -->
-  </div>
-  </body>  
-  <footer>
-    footer: fixed height in px
-  </footer>
-</section>
